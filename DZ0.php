@@ -3,7 +3,7 @@
 const TEST_CONSTANTA = 'asd';
 
 // $user_name = "Igor";
-$userName = "Igor";
+$userName = 'Igor';
 
 // function show_something(){ RETURN 'SOMETHING';}
 function showSomething()
