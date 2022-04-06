@@ -1,7 +1,7 @@
 <?php
 
 // Задание 1
-$name = 'Marat';
+$name = 'Марат';
 
 $age = '29';
 
@@ -29,12 +29,12 @@ if ($myAge >= 18 && $myAge <= 65) {
 } elseif ($myAge < 17) {
     echo 'Вам ещё рано работать';
 } else {
-    echo 'Неизвестный возраст';
+    echo 'Неизвестный возраст'; // в текущей реализации сюда попасть не выйдет
 }
 
 // Задание 4
 echo '<br>';
-$day = mt_rand(0, 7);
+$day = mt_rand(0, 7); // 0, чтобы был шанс сработать default
 
 switch ($day) {
     case $day >= 1 && $day <= 5:
@@ -49,6 +49,7 @@ switch ($day) {
 
 // Задание 5
 echo '<br>';
+echo '<hr>';
 $bmw = [
     'model' => 'X5',
     'speed' => 120,
@@ -82,21 +83,21 @@ foreach ($allCars as $key => $value) {
 
 // Задание 6
 echo '<br>';
-
+echo '<hr>';
 echo '<table>';
 
 for ($i = 1; $i < 11; $i++) {
-    echo '<tr><td>';
+    echo '<tr>';
     for ($j = 1; $j < 11; $j++) {
         echo ' ';
         if (($i % 2 == 0) && ($j % 2 == 0)) {
-            echo '(' . $i * $j . ')';
+            echo '<td>' . '(' . $i * $j . ')' . '<td>';
         } elseif (($i % 2 != 0) && ($j % 2 != 0)) {
-            echo '[' . $i * $j . ']';
+            echo '<td>' . '[' . $i * $j . ']' . '<td>';
         } else {
-            echo $i * $j;
+            echo '<td>' . $i * $j . '<td>';
         }
     }
-    echo '</td></tr>';
+    echo '</tr>';
 }
 echo '</table>';
